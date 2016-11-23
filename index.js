@@ -44,7 +44,7 @@ app.intent("writeIntent",
 		]
 	},
 	function(request,response) {
-		twitterClient.post('statuses/update', {status: 'Hi! I\'m testing twitter with alexa'!},  function(error, tweet, response) {
+		twitterClient.post('statuses/update', {status: 'Hi! I\'m testing twitter with alexa!'},  function(error, tweet, response) {
 		  	if(error) throw error;
 		  	console.log(tweet);  // Tweet body. 
 		  	console.log(response);  // Raw response object. 
