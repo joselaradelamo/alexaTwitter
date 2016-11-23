@@ -45,7 +45,7 @@ app.intent("writeIntent",
 		  	if(error) throw error;
 		  	console.log(tweet);  // Tweet body. 
 		  	console.log(response);  // Raw response object. 
-			response.say("<s>Your message " + text + " has been sent!</s>");
+			response.say("<s>Your message has been sent!</s>");
 			response.shouldEndSession(false);		
 		});
 	}
