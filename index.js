@@ -39,7 +39,8 @@ app.intent("writeIntent",
 		]
 	},
 	function(request,response) {
-		console.log(response);  
+		var text = request.slot('TEXT');
+		response.say(text);/*
 
 		twitterClient.post('statuses/update', {status: 'Hi! I\'m testing twitter with alexa!'},  function(error, tweet, response) {
 		  	if(error) throw error;
@@ -47,7 +48,7 @@ app.intent("writeIntent",
 		  	console.log(response);  // Raw response object. 
 			response.say("<s>Hi! Welcome to Jose's home. The Wi-Fi password is x and you have some fresh beer in the fridge</s>");
 			response.shouldEndSession(false);		
-		});
+		});*/
 	}
 );
 
