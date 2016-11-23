@@ -45,7 +45,7 @@ app.intent("writeIntent",
 		  	if(error) throw error;
 		  	console.log(tweet);  // Tweet body. 
 		  	console.log(response);  // Raw response object. 
-			response.say("<s>Hi! Welcome to Jose's home. The Wi-Fi password is x and you have some fresh beer in the fridge</s>");
+			response.say("<s>Your message " + text + " has been sent!</s>");
 			response.shouldEndSession(false);		
 		});
 	}
@@ -59,7 +59,7 @@ app.intent("readIntent",
 		]
 	},
 	function(request,response) {
-		response.say("<s>Hi! Welcome home! I hope your day was well</s>");
+		response.say("<s>I\'ll read your messages!</s>");
 		response.shouldEndSession(false);		
 	}
 );
