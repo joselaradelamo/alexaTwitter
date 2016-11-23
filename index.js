@@ -33,19 +33,15 @@ function connectTwitter(callback) {
 
 app.intent("writeIntent",
 	{
-		"slots":[
-			/*{
-				"name": "text",
-				"type": "AMAZON.LITERAL"
-			}*/
-		],
+		"slots": {"TEXT": "LITERAL"},
 		"utterances": [
-			"write"
+			"write {text|TEXT}"
 		]
 	},
 	function(request,response) {
+		console.log(response);  
+
 		twitterClient.post('statuses/update', {status: 'Hi! I\'m testing twitter with alexa!'},  function(error, tweet, response) {
-		  	console.log(error);  // Tweet body. 
 		  	if(error) throw error;
 		  	console.log(tweet);  // Tweet body. 
 		  	console.log(response);  // Raw response object. 
