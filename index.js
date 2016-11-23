@@ -80,7 +80,7 @@ app.intent("goodbyeIntent",
 	}
 );
 
-app.express(server, "/welcome/");
+app.express(server, "/twitter/");
 
 server.listen(port);
 console.log("Listening on port "+port);
